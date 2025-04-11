@@ -36,9 +36,13 @@ async function travelThroughHistory(){
     console.log("                                                  ");
     console.log(arr);
 
+    //ELIMINAZIONE DUPLICATI CON METODO SET
     let filtarr = arr.filter(c => c.year <= 2000);
-    
     filtarr = Array.from(new Set(filtarr.map(JSON.stringify))).map(JSON.parse);
+    
+    //ELIMINAZIONE DUPLICATI CON METODO FILTER
+    //filtarr = arr.filter((v,i,o) => o.findIndex(evento => evento.year === v.year) === i).filter(c => c.year <= 2000);
+
     console.log("                                                  ");
     console.log("************** EVENTI FINO AL 2000! **************");
     console.log("**************************************************");
