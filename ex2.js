@@ -107,7 +107,7 @@ function getPastEvent() {
 const pres = new Set();
 const unqitems = [];
 
-async function getevent() {
+async function getEvent() {
 
     const val = await getPastEvent();
 
@@ -121,11 +121,11 @@ async function getevent() {
     }
 }
 
-async function TravelTroughHistory() {
+async function travelThroughHistory() {
 
     while (pres.size < 95) {
 
-        const promises = Array.from({ length: Math.floor(Math.random() * 100) }, () => getevent());
+        const promises = Array.from({ length: Math.floor(Math.random() * 100) }, () => getEvent());
 
         const res = await Promise.all(promises);
 
@@ -140,4 +140,4 @@ async function TravelTroughHistory() {
     console.log(unqitems);
 }
 
-MakePromises();
+travelThroughHistory();
