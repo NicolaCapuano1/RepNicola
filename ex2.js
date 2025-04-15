@@ -107,7 +107,7 @@ function getPastEvent() {
 const pres = new Set();
 const unqitems = [];
 
-async function rndvalue() {
+async function getevent() {
 
     const val = await getPastEvent();
 
@@ -121,11 +121,11 @@ async function rndvalue() {
     }
 }
 
-async function MakePromises() {
+async function TravelTroughHistory() {
 
     while (pres.size < 95) {
 
-        const promises = Array.from({ length: Math.floor(Math.random() * 100) }, () => rndvalue());
+        const promises = Array.from({ length: Math.floor(Math.random() * 100) }, () => getevent());
 
         const res = await Promise.all(promises);
 
