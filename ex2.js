@@ -139,10 +139,12 @@ async function travelThroughHistory() {
 
     console.log("**************************************************");
     console.log(`Eventi unici estratti: ${unqitems.length}`);
+    console.log("**************************************************");
     console.log(unqitems);
  
     console.log("**************************************************");
     console.log(`Eventi fino al 2000 estratti: ${unqitems2000.length}`);
+    console.log("**************************************************");
     console.log(unqitems2000);
 }
 
