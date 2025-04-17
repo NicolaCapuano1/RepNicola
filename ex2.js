@@ -100,7 +100,7 @@ function getPastEvent() {
             ];
             const randomIndex = Math.floor(Math.random() * events.length);
             resolve(events[randomIndex]);
-        }, Math.random() * 0);
+        }, Math.random() * 1000);
     });
 }
 
@@ -135,9 +135,15 @@ async function travelThroughHistory() {
     }
 
     unqitems.sort((a, b) => a.year - b.year);
+    const unqitems2000 = unqitems.filter(c => c.year <= 2000)
 
-    console.log(unqitems.length);
+    console.log("**************************************************");
+    console.log(`Eventi unici estratti: ${unqitems.length}`);
     console.log(unqitems);
+ 
+    console.log("**************************************************");
+    console.log(`Eventi fino al 2000 estratti: ${unqitems2000.length}`);
+    console.log(unqitems2000);
 }
 
 travelThroughHistory();
